@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --poppins: 'Poppins', sans-serif;
+    --open-sans: 'Open Sans', sans-serif;
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main {
+    background-image: url(images/bg-desktop.svg);
+    background-color: var(--Violet);
+    background-size: cover;
+    padding: 2.5rem 4.5rem;
+}
+main nav img {
+    width: 12rem;
+}
+main article {
+    margin-top: 4.5rem;
+}
+main .pro-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3.25rem;
+}
+main article img {
+    width: 100%;
+}
+main article .container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.15rem;
+    margin-top: 2rem;
+}
+main article .container h1 {
+    font-family: var(--poppins);
+    color: #fff;
+    font-size: 2.175rem;
+    width: 75%;
+}
+main article .container span {
+    font-family: var(--open-sans);
+    color: #fff;
+    font-size: 1rem;
+    width: 78%;
+    line-height: 1.75;
+}
+main article .container button {
+    color: var(--Violet);
+    padding: 0.665rem 3rem;
+    border-radius: 2.85rem;
+    border: none;
+    font-size: 0.925rem;
+    font-family: var(--poppins);
+    box-shadow: 0px 3px 5px 4px rgba(0,0,0,0.19);
+    -webkit-box-shadow: 0px 3px 5px 4px rgba(0,0,0,0.19);
+    -moz-box-shadow: 0px 3px 5px 4px rgba(0,0,0,0.19);
+    cursor: pointer;
+}
+main article .container button:hover {
+    background-color: var(--Soft-Magenta);
+    color: #fff;
+}
+main article .button-container {
+    text-align: end;
+    margin-top: 1.5rem;
+}
+main article .button-container button {
+    margin-inline: 0.35rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 0.15rem;
+    font-size: 1rem;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+main article .button-container button:hover {
+    border-color: var(--Soft-Magenta);
+    color: var(--Soft-Magenta);
+}
+@media (max-width: 1300px) {
+    main .pro-container {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
+    main .pro-container {
+        text-align: center;
+    }
+    main .pro-container img {
+        max-width: 650px;
+    }
+    main .pro-container span,
+    main .pro-container img,
+    main .pro-container h1 {
+        margin: 0 auto;
+    }
+    main article .button-container {
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
